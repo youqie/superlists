@@ -5,6 +5,7 @@ from django.http import HttpRequest
 from django.template.loader import render_to_string
 
 from lists.views import home_page
+from lists.models import Item
 
 
 class HomePageTest(TestCase):
@@ -47,6 +48,6 @@ class ItemModelTest(TestCase):
         self.assertEqual(saved_items.count(),2)
 
         first_saved_item = saved_items[0]
-        second_saved_item = saved_items[1]
+        second_saved_item = saved_items[1] 
         self.assertEqual(first_saved_item.text, 'The first (ever) list item')
         self.assertEqual(second_saved_item.text, 'Item the second')
