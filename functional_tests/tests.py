@@ -9,7 +9,7 @@ MAX_WAIT=10
 
 class NewVisitorTest(StaticLiveServerTestCase):
 
-  def setUp(self):
+    def setUp(self):
         self.browser = webdriver.Firefox()
         staging_server = os.environ.get('STAGING_SERVER')
         if staging_server:
